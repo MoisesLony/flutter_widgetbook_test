@@ -4,7 +4,7 @@ import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 import '../../atom/button.dart'; // Asegúrate de que esta ruta sea correcta
 
 @widgetbook.UseCase(
-  name: 'Botón Interactivo', // ¡Ahora solo tenemos un caso de uso!
+  name: 'Botón Interactivo', 
   type: MyButton,
 )
 Widget interactiveButtonUseCase(BuildContext context) {
@@ -35,10 +35,9 @@ Widget interactiveButtonUseCase(BuildContext context) {
     initialValue: Colors.white,
   );
 
-  //...
-  // Envuelve tu botón en Padding y luego en Align
+ 
   return Padding(
-    padding: const EdgeInsets.all(100.0), // Añade un poco de espacio
+    padding: const EdgeInsets.all(100.0), 
     child: Align(
       alignment: Alignment.topCenter, 
       child: MyButton(

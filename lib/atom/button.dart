@@ -18,8 +18,7 @@ class MyButton extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    // Se crea un estilo a partir de los parámetros.
-    // Si un color es nulo, se usará el color por defecto del tema.
+   
     final ButtonStyle style = ElevatedButton.styleFrom(
       backgroundColor: backgroundColor,
       foregroundColor: textColor, // `foregroundColor` controla el color del texto y el ícono
@@ -31,7 +30,7 @@ class MyButton extends StatelessWidget {
       return ElevatedButton.icon(
         onPressed: onPressed,
         style: style,
-        icon: icon!, // Es seguro usar `!` porque ya comprobamos que no es nulo
+        icon: icon!,
         label: Text(text),
       );
     } else {

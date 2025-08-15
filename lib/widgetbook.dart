@@ -3,7 +3,7 @@ import 'package:prueba1/widgetbook.directories.g.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
 
-// Esta directiva 'part' conecta este archivo con el archivo que se generará.
+
 
 
 void main() {
