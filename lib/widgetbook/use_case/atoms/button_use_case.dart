@@ -1,7 +1,7 @@
 import 'package:flutter/material.dart';
 import 'package:widgetbook/widgetbook.dart';
 import 'package:widgetbook_annotation/widgetbook_annotation.dart' as widgetbook;
-import '../../atom/button.dart'; // Asegúrate de que esta ruta sea correcta
+import '../../components/atom/button.dart'; // Asegúrate de que esta ruta sea correcta
 
 @widgetbook.UseCase(
   name: 'Botón Interactivo', 
