@@ -6,6 +6,8 @@ class MyButton extends StatelessWidget {
   final Widget? icon;            // 2. Parámetro opcional para el ícono
   final Color? backgroundColor; // 3. Parámetro opcional para el color de fondo
   final Color? textColor;       // 4. Parámetro opcional para el color del texto
+  final Size? fixedSize;
+  final TextStyle? textStyle;   // 5. Parámetro opcional para el estilo del texto
 
   const MyButton({
     super.key,
@@ -14,6 +16,8 @@ class MyButton extends StatelessWidget {
     this.icon,
     this.backgroundColor,
     this.textColor,
+    this.fixedSize,
+    this.textStyle,
   });
 
   @override
@@ -22,22 +26,21 @@ class MyButton extends StatelessWidget {
     final ButtonStyle style = ElevatedButton.styleFrom(
       backgroundColor: backgroundColor,
       foregroundColor: textColor, // `foregroundColor` controla el color del texto y el ícono
+      fixedSize: fixedSize,      
     );
 
-    // Si el widget `icon` no es nulo, usamos `ElevatedButton.icon`.
-    // De lo contrario, usamos el constructor estándar de `ElevatedButton`.
     if (icon != null) {
       return ElevatedButton.icon(
         onPressed: onPressed,
         style: style,
         icon: icon!,
-        label: Text(text),
+        label: Text(text, style: textStyle),
       );
     } else {
       return ElevatedButton(
         onPressed: onPressed,
         style: style,
-        child: Text(text),
+        child: Text(text, style: textStyle),
       );
     }
   }
